@@ -19,6 +19,7 @@ import com.example.saikat.fragmentdemo.R;
 public class FragmentA extends android.app.Fragment {
     Button button;
     int count=0;
+    String hello;
     public Communicator communicator;
 
     @Nullable
