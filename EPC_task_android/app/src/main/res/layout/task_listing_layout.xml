@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:padding="10sp"
+        android:background="@drawable/white_background"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="0sp"
+            android:layout_weight="0.7"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/myTask_text"
+                android:textStyle="bold"
+                android:textColor="@color/Black"
+                android:text="3/8/2017 Erect 11kv pole"
+                android:textSize="15sp"
+                />
+
+
+
+        </LinearLayout>
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/switchButton"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:checked="true"
+            app:track="@drawable/switch_track_selector"
+            android:layout_gravity="center"
+            android:thumb="@drawable/switch_thumb_selector"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">EPC_Task</string>
+    <string name="no_internet_msg">Please check your internet connection and try again..</string>
+    <string name="server_connection_error_msg">Server Connection error.please try again later</string>
+    <string name="task">Task</string>
+    <string name="please_wait_msg">Please wait...</string>
+
+</resources>

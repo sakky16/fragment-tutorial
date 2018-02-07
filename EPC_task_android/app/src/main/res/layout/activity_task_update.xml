@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/root"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.trisysit.epc_task_android.activity.TaskUpdateActivity">
+    <include
+        android:id="@+id/toolbar_setting"
+        layout="@layout/app_bar_layout" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/LightGrey"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Task List for Today"
+                android:padding="10sp"
+                android:id="@+id/task_list_tv"
+                android:textStyle="bold"
+                android:textColor="@color/Black"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_width="50sp"
+                android:scaleType="fitCenter"
+                android:layout_alignParentRight="true"
+                android:id="@+id/date_picker_iv"
+                android:src="@drawable/blue_calendar_icon"
+                android:layout_height="45sp" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ListView
+                android:id="@+id/task_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:divider="@color/LightGrey"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:dividerHeight="3dp">
+            </ListView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="No task available"
+                android:layout_centerHorizontal="true"
+                android:textSize="18sp"
+                android:visibility="gone"
+                android:id="@+id/no_task_msg"
+                android:textColor="@color/Black"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
