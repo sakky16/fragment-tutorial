@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:background="@color/White"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.trisysit.epc_android.activity.ProjectListingActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/app_bar_layout" />
+    <include
+        android:id="@+id/snack_bar"
+        android:visibility="gone"
+        layout="@layout/snack_bar_layout"/>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:id="@+id/scrollView"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:padding="10sp"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_marginTop="20sp"
+                android:layout_marginBottom="20sp"
+                android:background="@drawable/transparent_blue_border"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="36kv VCB"
+                        android:textColor="@color/Black"
+                        android:textSize="16sp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:id="@+id/material_name_tv"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:weightSum="3"
+                    android:layout_marginTop="10sp"
+                    android:layout_height="30sp">
+                    <TextView
+                        android:layout_width="0sp"
+                        android:layout_weight="1"
+                        android:text="Unit: "
+                        android:textSize="12sp"
+                        android:id="@+id/schedule_tv"
+                        android:textColor="@color/Black"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_width="0sp"
+                        android:layout_weight="1"
+                        android:text="Total Loa Qnty:"
+                        android:textSize="12sp"
+                        android:layout_marginLeft="10sp"
+                        android:id="@+id/schedulePart_tv"
+                        android:textColor="@color/Black"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_width="0sp"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="10sp"
+                        android:text="Actual Loa Qnty:"
+                        android:textSize="12sp"
+                        android:id="@+id/progress1_tv"
+                        android:textColor="@color/Black"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:weightSum="3"
+                    android:layout_marginTop="10sp"
+                    android:layout_height="30sp">
+                    <TextView
+                        android:layout_width="0sp"
+                        android:layout_weight="1"
+                        android:text=" "
+                        android:textSize="12sp"
+                        android:id="@+id/unit_tv"
+                        android:textColor="@color/Black"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_width="0sp"
+                        android:layout_weight="1"
+                        android:text="Scope:"
+                        android:textSize="12sp"
+                        android:layout_marginLeft="10sp"
+                        android:id="@+id/scope_tv"
+                        android:textColor="@color/Black"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_width="0sp"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="10sp"
+                        android:text="Actual Loa Qnty:"
+                        android:textSize="12sp"
+                        android:visibility="gone"
+                        android:id="@+id/act_qnty_tv"
+                        android:textColor="@color/Black"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:background="@drawable/transparent_blue_border"
+                android:layout_height="40sp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Last updated on 1 dec 2017"
+                    android:textSize="16sp"
+                    android:textColor="@color/Black"
+                    android:id="@+id/last_updated_project_tv"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/relative"
+                    >
+                    <ProgressBar
+                        android:id="@+id/circularProgressbar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="400dp"
+                        android:layout_height="200sp"
+                        android:indeterminate="false"
+                        android:max="100"
+                        android:progress="60"
+                        android:layout_centerInParent="true"
+                        android:progressDrawable="@drawable/circular"
+                        android:secondaryProgress="20"
+                        />
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/whitecircle"
+                        android:layout_centerInParent="true"/>
+
+                    <TextView
+                        android:id="@+id/progress_tv"
+                        android:layout_width="350dp"
+                        android:layout_height="150dp"
+                        android:gravity="center"
+                        android:text="70"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="20sp"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:visibility="gone"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0sp"
+                    android:layout_weight="0.4"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/Black"
+                    android:layout_gravity="center"
+                    android:text="Select daily update :"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_width="0sp"
+                    android:layout_weight="0.6"
+                    android:background="@drawable/transparent_blue_border"
+                    android:layout_height="45sp">
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:id="@+id/daily_update_sp"
+                        android:layout_height="match_parent">
+                    </Spinner>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="20sp"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0sp"
+                    android:layout_weight="0.4"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/Black"
+                    android:layout_gravity="center"
+                    android:text="Select District :"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_width="0sp"
+                    android:layout_weight="0.6"
+                    android:background="@drawable/transparent_blue_border"
+                    android:layout_height="45sp">
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:id="@+id/location1_sp"
+                        android:overlapAnchor="false"
+                        android:layout_height="match_parent">
+                    </Spinner>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="20sp"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0sp"
+                    android:layout_weight="0.4"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/Black"
+                    android:layout_gravity="center"
+                    android:text="Select Town :"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_width="0sp"
+                    android:layout_weight="0.6"
+                    android:background="@drawable/transparent_blue_border"
+                    android:layout_height="45sp">
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:id="@+id/location2_sp"
+                        android:overlapAnchor="false"
+                        android:layout_height="match_parent">
+                    </Spinner>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="20sp"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0sp"
+                    android:layout_weight="0.4"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/Black"
+                    android:layout_gravity="center"
+                    android:text="Select Location :"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_width="0sp"
+                    android:layout_weight="0.6"
+                    android:background="@drawable/transparent_blue_border"
+                    android:layout_height="45sp">
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:id="@+id/location3_sp"
+                        android:overlapAnchor="false"
+                        android:layout_height="match_parent">
+                    </Spinner>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="20sp"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0sp"
+                    android:layout_weight="0.4"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/Black"
+                    android:layout_gravity="center"
+                    android:text="Select PSS :"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_width="0sp"
+                    android:layout_weight="0.6"
+                    android:background="@drawable/transparent_blue_border"
+                    android:layout_height="45sp">
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:id="@+id/location4_sp"
+                        android:overlapAnchor="false"
+                        android:layout_height="match_parent">
+                    </Spinner>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="20sp"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0sp"
+                    android:layout_weight="0.4"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/Black"
+                    android:layout_gravity="center"
+                    android:text="Select Feeder :"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_width="0sp"
+                    android:layout_weight="0.6"
+                    android:background="@drawable/transparent_blue_border"
+                    android:layout_height="45sp">
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:id="@+id/location5_sp"
+                        android:overlapAnchor="false"
+                        android:layout_height="match_parent">
+                    </Spinner>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="20sp"
+                android:weightSum="1"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0sp"
+                    android:layout_weight="0.4"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/Black"
+                    android:layout_gravity="center"
+                    android:text="Man power :"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:layout_width="0sp"
+                    android:paddingLeft="10sp"
+                    android:layout_weight="0.6"
+                    android:id="@+id/actual_man_power_et"
+                    android:inputType="number"
+                    android:hint="@string/enter_actual_manpower"
+                    android:background="@drawable/transparent_blue_border"
+                    android:layout_height="45sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="20sp"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0sp"
+                    android:layout_weight="0.4"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/Black"
+                    android:layout_gravity="center"
+                    android:text="Contractor :"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:layout_width="0sp"
+                    android:paddingLeft="10sp"
+                    android:layout_weight="0.6"
+                    android:id="@+id/contractor_et"
+                    android:inputType="text"
+                    android:hint="@string/enter_contractor_name"
+                    android:background="@drawable/transparent_blue_border"
+                    android:layout_height="45sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="20sp"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0sp"
+                    android:layout_weight="0.4"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/Black"
+                    android:layout_gravity="center"
+                    android:text="Progress :"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:layout_width="0sp"
+                    android:paddingLeft="10sp"
+                    android:layout_weight="0.6"
+                    android:id="@+id/quantity_et"
+                    android:inputType="numberDecimal"
+                    android:hint="@string/enter_qnty_hint"
+                    android:background="@drawable/transparent_blue_border"
+                    android:layout_height="45sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0sp"
+                    android:layout_weight="0.4"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/Black"
+                    android:layout_gravity="center"
+                    android:text="Progress date :"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_width="0sp"
+                    android:layout_weight="0.6"
+                    android:layout_marginTop="20sp"
+                    android:id="@+id/date_ll"
+                    android:background="@drawable/transparent_blue_border"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="50sp"
+                        android:scaleType="fitCenter"
+                        android:id="@+id/date_picker_iv"
+                        android:src="@drawable/blue_calendar_icon"
+                        android:layout_height="45sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Last updated date"
+                        android:textSize="18sp"
+                        android:id="@+id/input_date"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginRight="10sp"
+                android:layout_marginLeft="10sp"
+                android:layout_marginBottom="10sp"
+                android:layout_marginTop="20sp"
+                android:layout_height="45sp">
+                <Button
+                    android:layout_width="match_parent"
+                    android:text="Apply"
+                    android:id="@+id/apply_btn"
+                    android:textAllCaps="false"
+                    android:textSize="18sp"
+                    android:textColor="@color/White"
+                    android:background="@drawable/green_backgroung"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+</LinearLayout>

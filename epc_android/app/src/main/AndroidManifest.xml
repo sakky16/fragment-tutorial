@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.trisysit.epc_android">
+
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_ASSISTED_GPS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_ASSISTED_GPS" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <application
+        android:name=".EPCApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/epc"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <receiver android:name=".utils.NetworkUpdateReciver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="d306a9a68d6024c763d4eeb2518b6f9891bda0f6" />
+
+        <activity
+            android:name=".activity.SplashScreenActivity"
+            android:screenOrientation="portrait"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".utils.UploadImageIntentService" />
+
+        <activity
+            android:name=".activity.UserLoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name=".activity.DrawerScreenActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.RecordAttendanceActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name=".activity.AttendenceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ProjectListingActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".activity.TaskUpdateActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name=".activity.AttendanceDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SyncInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.TaskActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SubTaskActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityTaskActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ShowTaskHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SubActivityTaskActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ChangePasswordActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"></activity>
+        <activity android:name=".activity.AttendaneAdminRecordAttendanceActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysVisible"
+            >
+
+        </activity>
+    </application>
+
+</manifest>

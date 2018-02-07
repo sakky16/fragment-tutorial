@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.trisysit.epc_android.activity.AttendanceDetailsActivity">
+
+    <include
+        android:id="@+id/toolbar_setting"
+        layout="@layout/app_bar_layout" />
+    <include
+        android:visibility="gone"
+        android:id="@+id/snack_bar"
+        layout="@layout/snack_bar_layout"/>
+
+
+    <ListView
+        android:id="@+id/attendanceTetails_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:dividerHeight="1dp"
+        android:divider="@color/Gray"
+        android:layout_weight="1">
+
+    </ListView>
+
+</LinearLayout>

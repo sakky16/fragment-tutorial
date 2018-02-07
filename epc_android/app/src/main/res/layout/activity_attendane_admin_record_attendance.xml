@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar_report"
+        layout="@layout/app_bar_layout" />
+
+    <include
+        android:id="@+id/snack_bar"
+        layout="@layout/snack_bar_layout"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:id="@+id/scorll_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15sp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="EPC"
+                    android:textColor="@color/Black"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/date_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text="wed,1 jan 2014"
+                    android:textSize="18sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:layout_marginTop="10sp">
+
+                    <TextView
+                        android:id="@+id/time_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="05:00"
+                        android:textSize="45sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/amOrPm_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="8sp"
+                        android:layout_toRightOf="@+id/time_tv"
+                        android:text="am" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90sp"
+                    android:layout_marginTop="10sp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="Enter Pin"
+                        android:id="@+id/enter_pin"
+                        android:textColor="@color/Black"
+                        android:textSize="25sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10sp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/enter_pin"
+                        android:layout_height="50sp">
+
+                        <EditText
+                            android:layout_width="40sp"
+                            android:paddingLeft="10sp"
+                            android:maxLength="1"
+                            android:inputType="number"
+                            android:id="@+id/pin_et1"
+                            android:imeOptions="actionPrevious"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/transparent_blue_border" />
+                        <EditText
+                            android:layout_width="40sp"
+                            android:layout_marginLeft="10sp"
+                            android:paddingLeft="10sp"
+                            android:maxLength="1"
+                            android:inputType="number"
+                            android:id="@+id/pin_et2"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/transparent_blue_border" />
+                        <EditText
+                            android:layout_width="40sp"
+                            android:layout_marginLeft="10sp"
+                            android:paddingLeft="10sp"
+                            android:maxLength="1"
+                            android:inputType="number"
+                            android:id="@+id/pin_et3"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/transparent_blue_border" />
+                        <EditText
+                            android:layout_width="40sp"
+                            android:layout_marginLeft="10sp"
+                            android:paddingLeft="10sp"
+                            android:maxLength="1"
+                            android:inputType="number"
+                            android:id="@+id/pin_et4"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/transparent_blue_border" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text=""
+                        android:visibility="gone"
+                        android:layout_marginTop="10sp"
+                        android:id="@+id/user_name_tv"
+                        android:textColor="@color/Black"
+                        android:textSize="25sp" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    android:id="@+id/punc_in_out_ll"
+                    android:visibility="gone"
+                    android:layout_marginRight="100dp"
+                    android:layout_marginTop="20sp"
+                    android:background="@drawable/transparent_blue_border"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/punch_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:text="Punch"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/punch_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/input_border_type"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginRight="10sp"
+                            android:background="@drawable/right_arrow" />
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/sun" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <Button
+                    android:id="@+id/cancel_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10sp"
+                    android:layout_marginLeft="100sp"
+                    android:layout_marginTop="20sp"
+                    android:layout_marginRight="100sp"
+                    android:background="@drawable/green_backgroung"
+                    android:text="CANCEL"
+                    android:textColor="@color/White"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+            `
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

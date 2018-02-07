@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/input_border_type2">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/date_time_tv"
+        android:layout_marginTop="20dp"
+        android:text="3/8/2017 In 9.30 Out 5:30 PM "
+        android:textColor="@color/Black"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:layout_marginRight="20dp"
+        android:text="Comments"
+        android:textColor="@color/Black"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/comment_tv"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:text="Comments Erected 12kv poles in narendra"
+        android:textColor="@color/Black"/>
+    <LinearLayout
+        android:id="@+id/images_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/image1"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:background="@drawable/border"
+            android:padding="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/attachment" />
+
+        <ImageView
+            android:id="@+id/image2"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/border"
+            android:padding="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/attachment" />
+
+        <ImageView
+            android:id="@+id/image3"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/border"
+            android:padding="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/attachment" />
+
+        <ImageView
+            android:id="@+id/image4"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/border"
+            android:padding="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/attachment" />
+
+        <ImageView
+            android:id="@+id/image5"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/border"
+            android:padding="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/attachment" />
+        <ImageView
+            android:id="@+id/image6"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/border"
+            android:padding="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/attachment" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="50sp">
+        <LinearLayout
+            android:layout_width="0sp"
+            android:layout_weight="0.7"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/Black"
+                android:id="@+id/comment_tv"
+                android:layout_marginTop="5sp"
+                android:layout_marginLeft="20sp"
+                android:text="Hello everry"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/Black"
+                android:id="@+id/time_tv"
+                android:layout_marginLeft="20sp"
+                android:text="Hello everry"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="30sp"
+            android:layout_gravity="center"
+            android:id="@+id/work_image_iv"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="20sp"
+            android:src="@drawable/camera_icon"
+            android:layout_height="30sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

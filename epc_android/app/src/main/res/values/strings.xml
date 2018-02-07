@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">EPC</string>
+    <string name="title_activity_drawer_screen">DrawerScreenActivity</string>
+    <string name="checkin">Record Attendance</string>
+    <string name="pin_checkIn">Pin Attendance</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="coming_soon">Coming soon!!</string>
+    <string name="report">Report</string>
+    <string name="attendence"> Attendance List</string>
+    <string name="projectList">Project List</string>
+    <string name="task_listing">Task List</string>
+    <string name="change_password">Change Password</string>
+    <string name="subActivity_list">SubActivity List</string>
+    <string name="sub_task_list">Sub Task List</string>
+    <string name="task_material">Task Update</string>
+    <string name="activity_update">Activity Update</string>
+    <string name="sub_activity_update">Sub Activity Update</string>
+    <string name="no_subject">No Subject</string>
+    <string name="punch_in">Punch In</string>
+    <string name="daily_task_update">Daily Task Update</string>
+    <string name="Sync_in_progress">Sync In Progress...please wait..</string>
+    <string name="please_wait_msg">Please wait...</string>
+    <string name="saving_your_data">Saving your data.....</string>
+    <string name="project_hint"><font size="14">Search by project name</font></string>
+    <string name="enter_qnty_hint"><font size="14">Enter Progress</font></string>
+    <string name="enter_actual_manpower"><font size="14">Enter man power</font></string>
+    <string name="enter_contractor_name"><font size="14">Enter contractor name</font></string>
+    <string name="old_password_hint">* Enter Old Password</string>
+    <string name="new_password_hint">* Enter New Password</string>
+    <string name="confirm_password_hint">* Confirm New Password</string>
+    <string name="punch_out">Punch Out</string>
+    <string name="punch_in_success_msg">You have successfully recorded your attendance for today</string>
+    <string name="punch_out_success_msg">You have successfully punched out for today</string>
+    <string name="invalid_pin">Invalid Pin !! Please check your pin</string>
+    <string name="select_country">Select country</string>
+    <string name="select_time">Select Time</string>
+    <string name="no_internet_msg">Please check your internet connection and try again..</string>
+    <string name="server_connection_error_msg">Server Connection error.please try again later</string>
+</resources>
